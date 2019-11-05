@@ -1,0 +1,19 @@
+---
+# Short description of this project
+description: |-
+  Terraform module to provision a [KMS](https://aws.amazon.com/kms/) key with alias.
+
+# How to use this project
+usage: |-
+  ```hcl
+      module "kms_key" {
+        source                  = "git::https://github.com/cloudposse/terraform-aws-kms-key.git?ref=master"
+        namespace               = "eg"
+        stage                   = "test"
+        name                    = "chamber"
+        description             = "KMS key for chamber"
+        deletion_window_in_days = 10
+        enable_key_rotation     = true
+        alias                   = "alias/parameter_store_key"
+      }
+  ```

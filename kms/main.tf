@@ -1,4 +1,5 @@
 module "label" {
+  source     = "git::https://github.com/cloudposse/terraform-null-label.git?ref=tags/0.14.1"
   namespace  = var.namespace
   stage      = var.stage
   name       = var.name
@@ -18,6 +19,6 @@ resource "aws_kms_key" "kms_key" {
 }
 
 resource "aws_kms_alias" "kms_alias" {
-  name          = "${var.alias}"
+  name          = "alias/${var.name}"
   target_key_id = "${aws_kms_key.kms_key.key_id}"
 }

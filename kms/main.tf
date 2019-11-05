@@ -7,8 +7,9 @@ module "label" {
   tags       = var.tags
 }
 
-resource "aws_kms_key" "default" {
-  count                   = var.enabled == true ? 1 : 0
+
+# aws_kms_key key creation
+resource "aws_kms_key" "kms_key" {
   deletion_window_in_days = var.deletion_window_in_days
   enable_key_rotation     = var.enable_key_rotation
   policy                  = var.policy
@@ -16,8 +17,7 @@ resource "aws_kms_key" "default" {
   description             = var.description
 }
 
-resource "aws_kms_alias" "default" {
-  count         = var.enabled == true ? 1 : 0
-  name          = coalesce(var.alias, format("alias/%v", module.label.id))
-  target_key_id = join("", aws_kms_key.default.*.id)
+resource "aws_kms_alias" "kms_alias" {
+  name          = "${var.alias}"
+  target_key_id = "${aws_kms_key.kms_key.key_id}"
 }

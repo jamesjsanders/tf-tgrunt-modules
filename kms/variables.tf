@@ -1,3 +1,11 @@
+variable "aws_profile" {
+  type    = "string"
+}
+
+variable "aws_region" {
+  type    = "string"
+}
+
 variable "namespace" {
   type        = string
   description = "Namespace (e.g. `eg` or `cp`)"

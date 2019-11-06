@@ -10,3 +10,4 @@ A repo which contains terragrunt specific modules
 
 # Code Sources
 * [terraform-aws-kms-key from Cloudposse](https://github.com/cloudposse/terraform-aws-kms-key)
+* [terraform-aws-s3-bucket from HashiCorp TF Modules ](https://registry.terraform.io/modules/terraform-aws-modules)

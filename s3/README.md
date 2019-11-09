@@ -29,13 +29,15 @@ module "s3_bucket" {
 
 }
 ```
-
+<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
 | acceleration\_status | (Optional) Sets the accelerate configuration of an existing bucket. Can be Enabled or Suspended. | string | `"null"` | no |
 | acl | (Optional) The canned ACL to apply. Defaults to 'private'. | string | `"private"` | no |
+| aws\_profile |  | string | n/a | yes |
+| aws\_region |  | string | n/a | yes |
 | bucket | (Optional, Forces new resource) The name of the bucket. If omitted, Terraform will assign a random, unique name. | string | `"null"` | no |
 | bucket\_prefix | (Optional, Forces new resource) Creates a unique bucket name beginning with the specified prefix. Conflicts with bucket. | string | `"null"` | no |
 | cors\_rule | Map containing a rule of Cross-Origin Resource Sharing. | any | `{}` | no |
@@ -67,3 +69,4 @@ module "s3_bucket" {
 | this\_s3\_bucket\_website\_endpoint | The website endpoint, if the bucket is configured with a website. If not, this will be an empty string. |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+

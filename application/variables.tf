@@ -60,7 +60,7 @@ variable "aws_security_group_bastion_id" {
 
 variable "aws_security_group_elb_id" {
   type        = string
-  description = "VPC Main Name"
+  description = "Security Group ELB ID"
 }
 
 variable "maintenance_window" {

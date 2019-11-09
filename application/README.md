@@ -21,7 +21,7 @@ The module contains the configuration for the application infrastructure
 | availability\_zone\_d | Availability Zone D | string | n/a | yes |
 | aws\_region | The AWS region to deploy to (e.g. us-east-1) | string | n/a | yes |
 | aws\_security\_group\_bastion\_id | Security Group Bastion ID | string | n/a | yes |
-| aws\_security\_group\_elb\_id | VPC Main Name | string | n/a | yes |
+| aws\_security\_group\_elb\_id | Security Group ELB ID | string | n/a | yes |
 | aws\_security\_group\_private\_id | Security Group Private ID | string | n/a | yes |
 | aws\_subnet\_private1\_id | Subnet Private 1 ID | string | n/a | yes |
 | aws\_subnet\_private2\_id | Subnet Private 2 ID | string | n/a | yes |

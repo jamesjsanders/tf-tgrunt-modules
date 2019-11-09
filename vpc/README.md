@@ -23,7 +23,7 @@ The module contains the configuration of AWS VPC
 | private2\_subnet | Private 2 Subnet | string | n/a | yes |
 | public1\_subnet | Public 1 Subnet | string | n/a | yes |
 | public2\_subnet | Public 2 Subnet | string | n/a | yes |
-| vpc\_cidr\_block | vpc desired CIDR block | string | `"10.0.11.0/24"` | no |
+| vpc\_cidr\_block | vpc desired CIDR block | string | `"10.0.0.0/16"` | no |
 | vpc\_name | VPC Name | string | n/a | yes |
 
 ## Outputs
@@ -32,12 +32,12 @@ The module contains the configuration of AWS VPC
 |------|-------------|
 | aws\_security\_group\_bastion\_id |  |
 | aws\_security\_group\_elb\_id |  |
+| aws\_security\_group\_private\_id |  |
 | aws\_subnet\_private1\_id |  |
 | aws\_subnet\_private2\_id |  |
 | aws\_subnet\_public1\_id |  |
 | aws\_subnet\_public2\_id |  |
 | aws\_vpc\_main\_id |  |
 | aws\_vpc\_main\_name | Requires Terraform 0.12.0 or above. |
-| security\_group\_private\_id |  |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->

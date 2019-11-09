@@ -22,7 +22,7 @@ output "aws_subnet_private2_id" {
   value = "${aws_subnet.private2.id}"
 }
 
-output "security_group_private_id" {
+output "aws_security_group_private_id" {
   value = "${aws_security_group.private.id}"
 }
 

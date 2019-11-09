@@ -42,7 +42,7 @@ Terraform module to provision a [KMS](https://aws.amazon.com/kms/) key with alia
 |------|-------------|
 | aws\_kms\_alias\_arn |  |
 | aws\_kms\_key\_arn |  |
-| aws\_kms\_key\_id |  |
+| aws\_kms\_key\_id | Requires Terraform 0.12.0 or above. |
 | name |  |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->

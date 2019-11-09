@@ -3,6 +3,11 @@ variable "aws_region" {
   type        = string
 }
 
+variable "aws_profile" {
+  description = "The AWS profile to use for deploy"
+  type        = string
+}
+
 variable "vpc_main_name" {
   type        = string
   description = "VPC Main Name"

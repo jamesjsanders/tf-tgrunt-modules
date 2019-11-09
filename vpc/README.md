@@ -17,6 +17,7 @@ The module contains the configuration of AWS VPC
 |------|-------------|:----:|:-----:|:-----:|
 | availability\_zone\_b | vpc desired CIDR block | string | n/a | yes |
 | availability\_zone\_d | vpc desired CIDR block | string | n/a | yes |
+| aws\_profile | The AWS profile to use for deploy | string | n/a | yes |
 | aws\_region | The AWS region to deploy to (e.g. us-east-1) | string | n/a | yes |
 | environment | Environment for vpc (production, staging, etc) | string | n/a | yes |
 | private1\_subnet | Private 1 Subnet | string | n/a | yes |
@@ -38,6 +39,6 @@ The module contains the configuration of AWS VPC
 | aws\_subnet\_public1\_id |  |
 | aws\_subnet\_public2\_id |  |
 | aws\_vpc\_main\_id |  |
-| aws\_vpc\_main\_name |  |
+| aws\_vpc\_main\_name | Requires Terraform 0.12.0 or above. |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->

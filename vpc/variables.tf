@@ -1,6 +1,10 @@
-### Variables
 variable "aws_region" {
   description = "The AWS region to deploy to (e.g. us-east-1)"
+  type        = string
+}
+
+variable "aws_profile" {
+  description = "The AWS profile to use for deploy"
   type        = string
 }
 

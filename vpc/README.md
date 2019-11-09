@@ -38,6 +38,6 @@ The module contains the configuration of AWS VPC
 | aws\_subnet\_public1\_id |  |
 | aws\_subnet\_public2\_id |  |
 | aws\_vpc\_main\_id |  |
-| aws\_vpc\_main\_name | Requires Terraform 0.12.0 or above. |
+| aws\_vpc\_main\_name |  |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->

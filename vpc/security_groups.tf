@@ -7,12 +7,12 @@ resource "aws_security_group" "bastion" {
     to_port     = 22
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
-    description = "Initial ssh port. Switched to 155 after server setup."
+    description = "Initial ssh port. Switched to 122 after server setup."
   }
 
   ingress {
-    from_port   = 155
-    to_port     = 155
+    from_port   = 122
+    to_port     = 122
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
     description = "prorated ssh"
@@ -68,12 +68,12 @@ resource "aws_security_group" "private" {
     to_port         = 22
     protocol        = "tcp"
     security_groups = ["${aws_security_group.bastion.id}"]
-    description     = "Initial ssh port. Switched to 155 after server setup."
+    description     = "Initial ssh port. Switched to 122 after server setup."
   }
 
   ingress {
-    from_port       = 155
-    to_port         = 155
+    from_port       = 122
+    to_port         = 122
     protocol        = "tcp"
     security_groups = ["${aws_security_group.bastion.id}"]
     description     = "prorated ssh"
